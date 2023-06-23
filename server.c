@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:52:04 by gsilva            #+#    #+#             */
-/*   Updated: 2023/06/23 17:06:58 by gsilva           ###   ########.fr       */
+/*   Updated: 2023/06/23 18:32:20 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ int	main(void)
 	ft_putnbr(getpid());
 	ft_putchar('\n');
 	while (1)
-		usleep(500);
+		usleep(100);
 	return (0);
 }

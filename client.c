@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:52:07 by gsilva            #+#    #+#             */
-/*   Updated: 2023/06/23 17:23:11 by gsilva           ###   ########.fr       */
+/*   Updated: 2023/06/23 18:29:31 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ void	send_sig(int pid, int c)
 			bin[i] = 0;
 		else
 			bin[i] = 1;
-		if (c > 0)
-			c = c >> 1;
+		c = c >> 1;
 		i--;
 	}
 	while (++i < 8)
@@ -43,7 +42,7 @@ int	main(int argc, char **argv)
 	int	pid;
 
 	if (argc != 3)
-		return (ft_putstr("Invalid arguments"));
+		return (ft_putstr("Invalid arguments\n"));
 	pid = ft_atoi(argv[1]);
 	while (*argv[2])
 		send_sig(pid, *argv[2]++);
