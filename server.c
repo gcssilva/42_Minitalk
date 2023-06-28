@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:52:04 by gsilva            #+#    #+#             */
-/*   Updated: 2023/06/28 16:07:19 by gsilva           ###   ########.fr       */
+/*   Updated: 2023/06/28 16:21:40 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(void)
 {
 	struct sigaction	sig_act;
 
-	sig_act.sa_handler = &handler;SA_RESTART;
+	sig_act.sa_handler = &handler;
 	sig_act.sa_flags = SA_RESTART;
 	sigaction(SIGUSR1, &sig_act, 0);
 	sigaction(SIGUSR2, &sig_act, 0);
@@ -44,8 +44,6 @@ int	main(void)
 	ft_putnbr(getpid());
 	ft_putchar('\n');
 	while (1)
-	{
 		pause();
-	}
 	return (0);
 }
